@@ -1,77 +1,83 @@
 <form
-    novalidate
-    [formGroup]="screenFormGroup"
+  novalidate
+  [formGroup]="screenFormGroup"
 >
-    <div
-        magic="YourTravel"
-        class="YourTravelProps"
-        [ngStyle]="{'background-image': mgGetStyle('YourTravel', 'background-image')}"
-    >
-        <input
-            type="text"
-            formControlName="ParkOnManage"
-            magic="ParkOnManage"
-            class="ParkOnManageProps"
-        />
-        <label
-            magic="TravelForLabel"
-            class="TravelForLabelProps mgFont20 mgColor30"
+  <div
+    class="magic-container"
+    magic="YourTravel"
+    class="YourTravel"
+    [ngStyle]="{'background-image': 'url(' + mgGetStyle('YourTravel', 'background') + ')'}"
+  >
+
+    <div class="main-menu">
+      <div
+        magic="menugroup"
+        class="menugroup mgColor46"
+      >
+        <div *ngIf="mgIsImageExists('MainHome')">
+          <img
+            magic="MainHome"
+            class="MainHome mgColor14"
+            [src]="mgGetImage('MainHome')"
+          />
+        </div>
+        <a
+          href="#"
+          magic="BPackages"
+          class="BPackages mgFont19 mgColor30"
         >
-            Travel for...
-            </label>
-            <div
-                magic="menugroup"
-                class="menugroupProps mgColor46"
-            >
-                <div *ngIf="mgIsImageExists('MainHome')">
-                    <img
-                        magic="MainHome"
-                        class="MainHomeProps mgColor14"
-                        [src]="mgGetImage('MainHome')"
-                    />
-                </div>
-                <a
-                    href="#"
-                    magic="BPackages"
-                    class="BPackagesProps mgFont19 mgColor30"
-                >
-                    {{mgGetValue('BPackages')}}
-                    </a>
-                    <a
-                        href="#"
-                        magic="BAirports"
-                        class="BAirportsProps mgFont19 mgColor30"
-                    >
-                        {{mgGetValue('BAirports')}}
-                        </a>
-                        <a
-                            href="#"
-                            magic="BHotels"
-                            class="BHotelsProps mgFont19 mgColor30"
-                        >
-                            {{mgGetValue('BHotels')}}
-                            </a>
-                            <a
-                                href="#"
-                                magic="BCarRentals"
-                                class="BCarRentalsProps mgFont19 mgColor30"
-                            >
-                                {{mgGetValue('BCarRentals')}}
-                                </a>
-                                <a
-                                    href="#"
-                                    magic="BRestaurants"
-                                    class="BRestaurantsProps mgFont19 mgColor30"
-                                >
-                                    {{mgGetValue('BRestaurants')}}
-                                    </a>
-                                    </div>
-                                    <ndc-dynamic
-                                        magic="MainCanvas"
-                                        class="MainCanvasProps"
-                                        [ndcDynamicComponent]="mgGetComp('MainCanvas')"
-                                        [ndcDynamicInputs]="mgGetParameters('MainCanvas')"
-                                    >
-                                        </ndc-dynamic>
-                                        </div>
-                                        </form>
+          {{mgGetValue('BPackages')}}
+        </a>
+        <a
+          href="#"
+          magic="BAirports"
+          class="BAirports mgFont19 mgColor30"
+        >
+          {{mgGetValue('BAirports')}}
+        </a>
+        <a
+          href="#"
+          magic="BHotels"
+          class="BHotels mgFont19 mgColor30"
+        >
+          {{mgGetValue('BHotels')}}
+        </a>
+        <a
+          href="#"
+          magic="BCarRentals"
+          class="BCarRentals mgFont19 mgColor30"
+        >
+          {{mgGetValue('BCarRentals')}}
+        </a>
+        <a
+          href="#"
+          magic="BRestaurants"
+          class="BRestaurants mgFont19 mgColor30"
+        >
+          {{mgGetValue('BRestaurants')}}
+        </a>
+      </div>
+
+    </div>
+
+    <div class="main-content">
+      <div class="main-label">
+        <label
+          magic="TravelForLabel"
+          class="TravelForLabel"
+        >
+          {{mgGetText('TravelForLabel')}}
+        </label>
+      </div>
+
+
+      <ndc-dynamic
+        magic="MainCanvas"
+        class="MainCanvas"
+        [ndcDynamicComponent]="mgGetComp('MainCanvas')"
+        [ndcDynamicInputs]="mgGetParameters('MainCanvas')"
+      >
+      </ndc-dynamic>
+    </div>
+  </div>
+</form>

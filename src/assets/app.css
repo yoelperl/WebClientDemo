@@ -1,0 +1,688 @@
+body
+{
+  margin: 0;
+  background: #465786;
+  /* border: 3px solid yellow; */
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  color: #070808;
+}
+
+
+
+.backgroundImage {height: 184px;background-repeat: no-repeat;width: 316px;background-size: cover;/* border: 2px solid yellow; */}
+
+.cards-wrapper {
+    /* border: 7px solid yellowgreen; */
+
+    display: inline-flex;
+    width: 100%;
+    flex-wrap: wrap;
+    /*padding: 4% 10% 3% 10%;*/
+    justify-content: left;
+    height: 80%;
+}
+
+.cards-wrapper > div, .cards-wrapper > mat-card {
+    width: 310px;
+    /*!*!* border: 5px solid red; *!*!*/
+    height: 328px;
+    display: inline-flex;
+    margin: 1%;
+}
+
+mat-card.mat-card, mat-card.add-card {
+    padding: 0;
+    width: 310px;
+    height: 328px;
+    overflow: hidden;
+    /* margin-right: 50px; */
+    min-width: 310px;
+}
+
+label.DescriptionText {
+    color: white;
+    position: absolute;
+    /* border: 1px solid greenyellow; */
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.details-wrapper {
+    /* border: 1px solid red; */
+    height: 144px;
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.flight-details {
+    /* border: 2px solid yellowgreen; */
+    flex: 2;
+    display: flex;
+    align-items: center;
+    /*justify-content: space-evenly;*/
+}
+
+.icons-area {
+    flex: 3;
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    padding-left: 20px;
+}
+
+label.DepartureDate, label.ArrivalDate {
+  color: #8d8d8d;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+img.takeoff, img.land
+{
+  padding-left: 20px;
+}
+
+.cards-wrapper form {}
+
+.menu-wrapper {
+     position: absolute;
+     right: 6px;
+     top: 3px;
+    color: white;
+}
+
+.mat-menu-item a {
+    text-decoration: none;
+    color: gray;
+    position: relative;
+    top: 2px;
+}
+
+mat-card.add-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button.BAdd {
+    /* flex: 1; */
+    background-color: #037ab2 !important;
+}
+
+.add-card > span {
+    display: block !important;
+    color: #a3a3a6;
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.YourTravel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 3px solid red; */
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 900px;
+}
+
+label.TravelForLabel {
+    color: white;
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+}
+
+html {
+    height: 100%;
+    /* border: 4px solid yellow; */
+}
+
+mga-yourtravel > form {
+    height: 100%;
+}
+
+.YourTravel {}
+
+.menugroup {
+    /* border: 4px solid white; */
+    width: 100%;
+    display: flex;
+    /* background: white; */
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 10px 0px rgba(6, 20, 40, 0.91);
+    /* width: 1920px; */
+    height: 120px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 50px;
+    MIN-WIDTH: 1020px;
+}
+
+.main-content {
+    /* border: 4px solid fuchsia; */
+    flex: 1;
+    width: 95%;
+    display: flex;
+    padding: 1%;
+    /* MARGIN-TOP: 70px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.main-menu {
+    width: 100%;
+    background-color: transparent;
+}
+
+.main-menu > .menugroup > a {
+    font-family: Roboto;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 20px;/* Approximation due to font substitution */
+    font-weight: 400;
+    line-height: 75.368px;/* Approximation due to font substitution */
+    text-align: center;
+    text-decoration: none;
+}
+
+.main-menu .menugroup > * {
+    margin-right: 80px;
+}
+
+.main-label {
+    font-family: Roboto;
+    color:  rgba(255, 255, 255, 0.85);
+    font-size: 20px;/* Approximation due to font substitution */
+    font-weight: 500;
+    line-height: 75.368px;/* Approximation due to font substitution */
+    text-align: center;
+    /* flex-direction: column; */
+    display: flex;
+
+}
+
+.main-card {
+    background-color: white;
+    flex: 1;
+    border-radius: 3px;
+    /* box-shadow: 1px -2px 30px #5b5b5b; */
+    box-shadow: 1px 1px 22.32px 1.68px rgba(6, 20, 40, 0.22);
+    /* max-height: 721px; */
+    overflow: auto;
+    margin: 20px;
+    max-width: 1600px;
+}
+
+.main-card.edit-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-card-photo-header {
+    height: 182px;
+    /* background: red; */
+    flex: 1;
+    /* border: 2px solid red; */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 7%;
+    padding: 11px;
+    display: flex;
+    /* align-items: end; */
+    /* justify-content: space-between; */
+    flex-direction: column;
+}
+
+label.main-card-label {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 20px;/* Approximation due to font substitution */
+    font-weight: 500;
+    line-height: 24px;/* Approximation due to font substitution */
+    text-align: right;
+    /* position: absolute; */
+    /* top: 50px; */
+    /* left: 50px; */
+    padding: 10px;
+}
+
+.picture-title-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flight-dates {}
+
+.flight-dates {
+    color: #cecece;
+    font-size: 16px;/* Approximation due to font substitution */
+    font-weight: 400;
+    line-height: 24px;/* Approximation due to font substitution */
+    padding-left: 0px;
+    margin-top: 50px;
+    margin: 10px;
+    /* border: 1px solid red; */
+}
+
+.btn-line {
+    display: inline-flex;
+    position: relative;
+    bottom: 23px;
+    left: 30px;
+    flex: 1;
+    /* border: 3px solid red; */
+}
+
+.bottom-pane {
+    /* border: 3px solid red; */
+    flex: 55;
+    display: flex;
+}
+
+.flight-dates > label {
+    margin-right: 5px;
+}
+
+.flight-dates > label:last-child {
+    margin-left: 5px;
+}
+
+.list-pane {
+    flex: 45;
+    /* border: 3px solid greenyellow; */
+    flex-direction: column;
+    padding: 10px 10px 10px 20px;
+    display: flex;
+    min-width: 470px;
+}
+
+.info-pane {
+    flex: 55;
+    /* border: 3px solid blue; */
+    display: flex;
+    padding: 10px 30px 30px 40px;
+}
+
+.list-item-form {
+    height: 70px;
+    /* border: 4px solid #3abdf9; */
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-top: 0.5px solid #e6e6e6;
+    padding: 10px 0 10px 10px;
+    border-bottom: 0.5px solid #e6e6e6;
+}
+
+.list-item-form-selected {
+
+height: 70px;
+
+/* border: 4px solid #3abdf9; */
+
+display: flex;
+
+width: 100%;
+
+align-items: center;
+
+border-top: 0.5px solid #e6e6e6;
+
+padding: 10px 0 10px 10px;
+
+border-bottom: 0.5px solid #e6e6e6;
+
+/* box-shadow: 0px 2px 5.22px 0.78px rgba(60, 60, 60, 0.2); */
+}
+
+.list-item:last-child {
+    border-bottom: 0.5px solid #e6e6e6;
+}
+
+.flight-icon {
+    flex: 1;
+    /* border: 1px solid red; */
+    position: relative;
+    top: 7px;
+}
+
+label.RDescription {
+    flex: 110;
+    /* border: 1px solid yellow; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: black;
+}
+
+img.flightLogo {
+    width: 110px;
+    height: 100%;
+}
+
+.tmpID33 {
+    flex-direction: column;
+}
+
+.tmpID34 {}
+
+
+.list-item > div {
+    width: 100%;
+}
+
+.list-labels-wrapper {
+    flex: 10;
+    /* border: 1px solid greenyellow; */
+    height: 100%;
+    flex-direction: column;
+    padding: 0px 10px 0px 20px;
+    color: #777777;
+    display: flex;
+}
+
+.airline-list-logo {
+    /* border: 3px solid red; */
+    height: 100%;
+    align-items: center;
+    flex: 4;
+}
+
+.menu-wrapper.list-menu {
+    color: darkgray;
+}
+
+.list-menu .mat-menu-content.ng-trigger.ng-trigger-fadeInItems {}
+
+.list-item:last-child {}
+
+.top-details-title {
+    /* border: 3px solid red; */
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    /*margin-bottom: 30px;*/
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+
+form.Hotel {
+    /* border: 3px solid blue; */
+    display: flex;
+    flex: 1;
+    padding: 10px 10px 10px 20px;
+    flex-direction: column;
+    min-width: 740px;
+}
+
+form.Hotel, form.Rest, form.Flight1 {
+    box-shadow: 0px 2px 5.22px 0.78px rgba(60, 60, 60, 0.2);
+    padding: 30px 40px 0px 40px;
+}
+
+mga-hotel {
+    width: 100%;
+    /* border: 1px solid saddlebrown; */
+    /* padding: 10px 40px 30px 40px; */
+    display: flex;
+    flex-direction: column;
+}
+
+img.AddHotelImg {
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+}
+
+label.SelectFlightL {
+    font-weight: 400;
+    font-size: 18px;
+    /* border: 1px solid red; */
+}
+
+.middle-details-section {
+    font-size: 16px;
+    font-weight: 500;
+    flex-direction: column;
+    display: flex;
+}
+
+.details-address-title {
+    margin-bottom: 30px;
+}
+
+.data-with-label {
+    flex-direction: column;
+    margin-bottom: 10px;
+    color: #8f8f8f;
+    font-weight: 400;
+    /* border: 1px solid red; */
+    display: flex;
+}
+
+.Rest .data-with-label {
+    min-width: 462px;
+}
+
+.checkin-details {
+    flex-direction: column;
+    /* display: flex; */
+}
+
+mga-edittravelrequestentries .checkin-details {
+    margin-right: 20px;
+}
+
+.data-with-label > label {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.list-item {
+    display: flex;
+}
+
+.list-item > div > form:hover, .list-item-form-selected {
+    box-shadow: 0 0 5px #3e3e3e;
+}
+
+.list-item * {
+    cursor: pointer;
+}
+
+.date-time-row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button.mat-mini-fab.mat-accent.mat-button.mat-raised.w-clock-deg180.mat-mini-fab:not([class*=mat-elevation-z]) {
+    box-shadow: none !important;
+}
+
+w-clock .mat-mini-fab:not([class*=mat-elevation-z]) {
+    box-shadow: none !important;
+}
+
+.w-clock[_ngcontent-c10] {
+    /* background: #3f51b5 !important; */
+    color: black;
+}
+
+w-clock span.mat-button-wrapper {
+    color: black;
+}
+
+w-clock .mat-toolbar.mat-primary {}
+
+.w-timepicker mat-toolbar.w-timepicker-time-container.mat-toolbar.mat-primary.mat-toolbar-single-row {
+    background: #3f51b5;
+}
+
+w-clock button.mat-mini-fab.mat-accent.mat-button.mat-raised.w-clock-deg150.mat-primary {
+}
+
+w-clock .mat-primary span.mat-button-wrapper {
+    color: white;
+}
+
+.checkin-row {
+    display: flex;
+    flex: 2;
+    /* border: 1px solid blue; */
+}
+
+mga-edittravelrequestentries .checkin-row {
+    margin-bottom: 20px;
+}
+
+.hotel-map-wrapper {
+    /* border: 1px solid red; */
+    flex: 1;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    min-width: 240px;
+}
+
+mga-edittravelrequestentries .hotel-map-wrapper {
+    padding-right: 0;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.map-image {
+    background-image: url("images/map.JPG");
+    background-size: cover;
+    border: 0.5px solid #c1c1c1;
+    height: 100%;
+    border-radius: 1px;
+    box-shadow: 1px 1px 2px #c9c9c9;
+}
+
+select.HotelID {
+    align-self: auto;
+}
+
+
+.hotel-title {
+    display: flex;
+    align-items: center;
+}
+
+.host {}
+
+.HotelID {
+    width: 200px !important;
+    /* border: 0.5px dashed lightgray; */
+}
+
+.HotelID-wrapper {
+    margin-right: 30px;
+}
+
+.imgSubForm-section {
+    /* border: 1px solid red; */
+    flex: 1;
+}
+
+.LargeImage {
+    display: flex;
+}
+
+.LargeImage img {
+    padding: 0px;
+    width: 112px;
+    margin-right: 20px;
+    margin-top:40px;
+}
+
+.details-button-section {
+    display: flex;
+    justify-content: flex-end;
+    height: 51px;
+    align-items: baseline;
+    /* border: 1px solid red; */
+}
+
+mga-edittravelrequestentries {
+    display: flex;
+    justify-content: center;
+}
+
+w-mat-timepicker {
+    margin-left: 30px;
+    min-width: 230px;
+}
+
+.no-title w-mat-timepicker {
+    margin: 0;
+}
+
+img.AddFlightImg {
+    position: relative;
+    top: 3px;
+    margin-right: 14px;
+}
+
+.map-image.airport-image {
+    background-image: url('images/airport2.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 79px;
+}
+
+.data-with-label.no-title {
+    justify-content: flex-end;
+    padding-bottom: 7px;
+}
+
+.map-image.rest-image {
+    height: 170px;
+    border: 2px solid red;
+}
+
+.side-by-side {
+    display: flex;
+}
+
+input#mat-input-0 {}
+
+.Rest .serviceAddress {
+    width: calc(100% - 49px);
+}
+
+form.Rest {
+    margin-left: 50px;
+}
+
+form.Flight1 {
+    flex: 1;
+}
+
+mga-flight1 {
+    display: flex;
+    flex: 1;
+}
+
+.image1, image2, image3, image4
+{
+  /*width: 80px;*/
+  height: 80px;
+
+}
+
+
