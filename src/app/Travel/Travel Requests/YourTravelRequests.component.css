@@ -1,0 +1,49 @@
+/*this is a component css*/
+
+.YourTravelRequestsProps {}
+
+.mytableProps {
+    height: 800px;
+    overflow-y: scroll;
+    border: lightskyblue solid 1px;
+}
+
+.mytable_table_rowProps {}
+
+.mytable_table_rowProps:hover {
+    background-color: #EEEEEE;
+}
+
+.selected {
+    background: #F5F5F5;
+}
+
+.Column1048579Props {}
+
+.backgroundImageProps {}
+
+.DescriptionTextProps {}
+
+.DepartureDateProps {}
+
+.ArrivalDateProps {}
+
+.takeoffProps {}
+
+.landProps {}
+
+.EllipseProps {}
+
+.FlightImgProps {}
+
+.HotelImgProps {}
+
+.CarImgProps {}
+
+.RestoImgProps {}
+
+.BEditProps {}
+
+.BDeleteProps {}
+
+.AddPlusImgProps {}

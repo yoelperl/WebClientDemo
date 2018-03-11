@@ -1,0 +1,141 @@
+<form
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        magic="FlightInformation"
+        class="FlightInformationProps mgColor14"
+    >
+        <div *ngIf="mgIsImageExists('AddFlightImg')">
+            <img
+                magic="AddFlightImg"
+                class="AddFlightImgProps mgColor14 hidden_border"
+                [src]="mgGetImage('AddFlightImg')"
+            />
+        </div>
+        <label
+            magic="SelectFlightL"
+            class="SelectFlightLProps mgFont14 mgColor1"
+        >
+            Flight Details
+            </label>
+            <label
+                magic="OriginL"
+                class="OriginLProps mgFont14 mgColor16"
+            >
+                Origin:
+                </label>
+                <input
+                    type="text"
+                    formControlName="fromairportEdit"
+                    magic="fromairportEdit"
+                    class="fromairportEditProps"
+                />
+                <input
+                    type="text"
+                    formControlName="airportNameFrom"
+                    magic="airportNameFrom"
+                    class="airportNameFromProps mgFont15 mgColor14"
+                />
+                <label
+                    magic="DestinationL"
+                    class="DestinationLProps mgFont14 mgColor16"
+                >
+                    Destination:
+                    </label>
+                    <input
+                        type="text"
+                        formControlName="toairportEdit"
+                        magic="toairportEdit"
+                        class="toairportEditProps"
+                    />
+                    <input
+                        type="text"
+                        formControlName="airportNameTo"
+                        magic="airportNameTo"
+                        class="airportNameToProps mgFont15 mgColor14"
+                    />
+                    <label
+                        magic="DepartureL"
+                        class="DepartureLProps mgFont14 mgColor16"
+                    >
+                        Departure:
+                        </label>
+                        <label
+                            magic="ArrivalL"
+                            class="ArrivalLProps mgFont14 mgColor16"
+                        >
+                            Arrival:
+                            </label>
+                            <p-calendar
+                                formControlName="fromdateEdit"
+                                magic="fromdateEdit"
+                                class="fromdateEditProps mgFont15 mgColor1"
+                            ></p-calendar>
+                                <p-calendar
+                                    formControlName="fromdateTimeEdit"
+                                    magic="fromdateTimeEdit"
+                                    class="fromdateTimeEditProps mgFont15 mgColor1"
+                                    [showSeconds]="true"
+                                    [timeOnly]="true"
+                                ></p-calendar>
+                                    <p-calendar
+                                        formControlName="todateEdit"
+                                        magic="todateEdit"
+                                        class="todateEditProps mgFont15 mgColor1"
+                                    ></p-calendar>
+                                        <p-calendar
+                                            formControlName="todateTimeEdit"
+                                            magic="todateTimeEdit"
+                                            class="todateTimeEditProps mgFont15 mgColor1"
+                                            [showSeconds]="true"
+                                            [timeOnly]="true"
+                                        ></p-calendar>
+                                            <div
+                                                magic="Grp2"
+                                                class="Grp2Props mgColor22"
+                                            >
+                                                <label
+                                                    magic="L_Flight"
+                                                    class="L_FlightProps mgFont14 mgColor16"
+                                                >
+                                                    Flight:
+                                                    </label>
+                                                    <input
+                                                        type="text"
+                                                        formControlName="flightnumberEdit"
+                                                        magic="flightnumberEdit"
+                                                        class="flightnumberEditProps mgFont15 mgColor1"
+                                                    />
+                                                    <div *ngIf="mgIsImageExists('classImg')">
+                                                        <img
+                                                            magic="classImg"
+                                                            class="classImgProps"
+                                                            [src]="mgGetImage('classImg')"
+                                                        />
+                                                    </div>
+                                                    <select
+                                                        (change)="mgOnSelectionChanged($event,'airline')"
+                                                        value="mgGetSelectedValue('airline')"
+                                                        magic="airline"
+                                                        class="airlineProps"
+                                                        formControlName="airline"
+                                                    >
+                                                        <option
+                                                            *ngFor="let o of mgGetListboxValues('airline');"
+                                                            [selected]="o.index == mgGetSelectedValue('airline')"
+                                                            [value]="o.index"
+                                                        >
+                                                            {{o.realString}}
+                                                            </option>
+                                                            </select>
+                                                            </div>
+                                                            <input
+                                                                type="button"
+                                                                magic="BSave"
+                                                                [attr.disabled]="mgIsDisabled('BSave')"
+                                                                class="BSaveProps"
+                                                                value=Ok
+                                                            />
+                                                            </div>
+                                                            </form>

@@ -1,0 +1,84 @@
+<form
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        magic="RestaurantInformation"
+        class="RestaurantInformationProps mgColor14"
+    >
+        <div *ngIf="mgIsImageExists('AddFlightImg')">
+            <img
+                magic="AddFlightImg"
+                class="AddFlightImgProps mgColor14 hidden_border"
+                [src]="mgGetImage('AddFlightImg')"
+            />
+        </div>
+        <label
+            magic="SelectFlightL"
+            class="SelectFlightLProps mgFont14 mgColor1"
+        >
+            Restaurant Details
+            </label>
+            <div *ngIf="mgIsImageExists('classImg')">
+                <img
+                    magic="classImg"
+                    [style.visibility]="mgGetVisible('classImg')"
+                    class="classImgProps"
+                    [src]="mgGetImage('classImg')"
+                />
+            </div>
+            <input
+                type="text"
+                formControlName="serviceAddress"
+                magic="serviceAddress"
+                class="serviceAddressProps mgFont15 mgColor2 has_border"
+            />
+            <label
+                magic="ReservationL"
+                class="ReservationLProps mgFont14 mgColor16"
+            >
+                Reservation:
+                </label>
+                <p-calendar
+                    formControlName="RestoFromTime"
+                    magic="RestoFromTime"
+                    class="RestoFromTimeProps mgFont15 mgColor1"
+                    [showSeconds]="true"
+                    [timeOnly]="true"
+                ></p-calendar>
+                    <p-calendar
+                        formControlName="fromdateEdit"
+                        magic="fromdateEdit"
+                        class="fromdateEditProps mgFont15 mgColor1"
+                    ></p-calendar>
+                        <select
+                            (change)="mgOnSelectionChanged($event,'fromairportCmb')"
+                            value="mgGetSelectedValue('fromairportCmb')"
+                            magic="fromairportCmb"
+                            class="fromairportCmbProps"
+                            formControlName="fromairportCmb"
+                        >
+                            <option
+                                *ngFor="let o of mgGetListboxValues('fromairportCmb');"
+                                [selected]="o.index == mgGetSelectedValue('fromairportCmb')"
+                                [value]="o.index"
+                            >
+                                {{o.realString}}
+                                </option>
+                                </select>
+                                <ndc-dynamic
+                                    magic="RestoImgSubform"
+                                    class="RestoImgSubformProps"
+                                    [ndcDynamicComponent]="mgGetComp('RestoImgSubform')"
+                                    [ndcDynamicInputs]="mgGetParameters('RestoImgSubform')"
+                                >
+                                    </ndc-dynamic>
+                                    <input
+                                        type="button"
+                                        magic="BSave"
+                                        [attr.disabled]="mgIsDisabled('BSave')"
+                                        class="BSaveProps"
+                                        value=Ok
+                                    />
+                                    </div>
+                                    </form>

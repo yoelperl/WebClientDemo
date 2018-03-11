@@ -1,0 +1,36 @@
+{
+  "components": [
+    {
+      "path": "Travel/Travel Main Form/",
+      "name": "YourTravel"
+    },
+    {
+      "path": "Travel/Travel Requests/",
+      "name": "YourTravelRequests"
+    },
+    {
+      "path": "EditTravalRequest/EditTravelRequest/",
+      "name": "EditTravelRequestEntries"
+    },
+    {
+      "path": "EditTravalRequest/flightInformation/",
+      "name": "FlightInformation"
+    },
+    {
+      "path": "EditTravalRequest/hotelInformation/",
+      "name": "HotelInformation"
+    },
+    {
+      "path": "EditTravalRequest/restaurantInformation/",
+      "name": "RestaurantInformation"
+    },
+    {
+      "path": "EditTravalRequest/carInformation/",
+      "name": "carInformation"
+    },
+    {
+      "path": "Utiles/showlargeimage/",
+      "name": "showlargeimage"
+    }
+  ]
+}

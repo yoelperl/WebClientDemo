@@ -1,0 +1,45 @@
+/*this is a component css*/
+
+.FlightInformationProps {}
+
+.AddFlightImgProps {}
+
+.SelectFlightLProps {}
+
+.OriginLProps {}
+
+.fromairportEditProps {}
+
+.airportNameFromProps {}
+
+.DestinationLProps {}
+
+.toairportEditProps {}
+
+.airportNameToProps {}
+
+.DepartureLProps {}
+
+.ArrivalLProps {}
+
+.fromdateEditProps {}
+
+.fromdateTimeEditProps {}
+
+.todateEditProps {}
+
+.todateTimeEditProps {}
+
+.Grp2Props {
+    border: lightskyblue solid 1px;
+}
+
+.L_FlightProps {}
+
+.flightnumberEditProps {}
+
+.classImgProps {}
+
+.airlineProps {}
+
+.BSaveProps {}

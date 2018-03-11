@@ -1,0 +1,162 @@
+<form
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        magic="EditTravelRequestEntries"
+        class="EditTravelRequestEntriesProps mgColor15"
+    >
+        <div *ngIf="mgIsImageExists('BckPckImg')">
+            <img
+                magic="BckPckImg"
+                [title]="mgGetTitle('BckPckImg')"
+                class="BckPckImgProps hidden_border"
+                [src]="mgGetImage('BckPckImg')"
+            />
+        </div>
+        <label
+            magic="DescriptionScreen"
+            class="DescriptionScreenProps mgFont20 mgColor30"
+        >
+            {{mgGetValue('DescriptionScreen')}}
+            </label>
+            <label
+                magic="DepartureDateScreen"
+                class="DepartureDateScreenProps mgFont21 mgColor30"
+            >
+                {{mgGetValue('DepartureDateScreen')}}
+                </label>
+                <label
+                    magic="ArrivalDateScreen"
+                    class="ArrivalDateScreenProps mgFont21 mgColor30"
+                >
+                    {{mgGetValue('ArrivalDateScreen')}}
+                    </label>
+                    <div *ngIf="mgIsImageExists('AddFlightImg')">
+                        <img
+                            magic="AddFlightImg"
+                            class="AddFlightImgProps mgColor14 hidden_border"
+                            [src]="mgGetImage('AddFlightImg')"
+                        />
+                    </div>
+                    <div *ngIf="mgIsImageExists('AddHotelImg')">
+                        <img
+                            magic="AddHotelImg"
+                            class="AddHotelImgProps mgColor14 hidden_border"
+                            [src]="mgGetImage('AddHotelImg')"
+                        />
+                    </div>
+                    <div *ngIf="mgIsImageExists('AddCarImg')">
+                        <img
+                            magic="AddCarImg"
+                            class="AddCarImgProps mgColor14 hidden_border"
+                            [src]="mgGetImage('AddCarImg')"
+                        />
+                    </div>
+                    <div *ngIf="mgIsImageExists('AddRestoImg')">
+                        <img
+                            magic="AddRestoImg"
+                            class="AddRestoImgProps mgColor14 hidden_border"
+                            [src]="mgGetImage('AddRestoImg')"
+                        />
+                    </div>
+                    <div
+                        magic="Group1048585"
+                        class="Group1048585Props"
+                    >
+                        <div
+                            class="TableEditRequestEntries"
+                            magic="TableEditRequestEntries"
+                            class="TableEditRequestEntriesProps"
+                            infinite-scroll
+                            [infiniteScrollDistance]="2"
+                            [infiniteScrollThrottle]="500"
+                            (scrolled)="onScrollDown()"
+                            [scrollWindow]="false"
+                        >
+                            <div *ngFor="let row of task.Records.list">
+                                <div
+                                    *ngIf="mgIfRowCreated(row.rowId)"
+                                    id="row"
+                                >
+                                    <form
+                                        [formGroup]="mgGetFormGroupByRow(row.rowId)"
+                                        class="TableEditRequestEntries_table_rowProps"
+                                        [ngClass]="{ 'selected': isRowSelected('TableEditRequestEntries', row.rowId)}"
+                                    >
+                                        <div
+                                            magic="Column1048588"
+                                            class="Column1048588Props"
+                                        >
+                                            <div *ngIf="mgIsImageExists('flight')">
+                                                <img
+                                                    magic="flight"
+                                                    [rowId]="row.rowId"
+                                                    class="flightProps hidden_border"
+                                                    [src]="mgGetImage('flight', row.rowId)"
+                                                />
+                                            </div>
+                                            <label
+                                                magic="RDescription"
+                                                [rowId]="row.rowId"
+                                                class="RDescriptionProps mgFont19 mgColor14"
+                                            >
+                                                {{mgGetValue('RDescription', row.rowId)}}
+                                                </label>
+                                                <label
+                                                    magic="bottomlabel"
+                                                    [rowId]="row.rowId"
+                                                    class="bottomlabelProps"
+                                                >
+                                                    </label>
+                            </div>
+                            <div
+                                magic="Column1048589"
+                                class="Column1048589Props"
+                            >
+                                <div *ngIf="mgIsImageExists('flightLogo')">
+                                    <img
+                                        magic="flightLogo"
+                                        [rowId]="row.rowId"
+                                        [title]="mgGetTitle('flightLogo', row.rowId)"
+                                        class="flightLogoProps hidden_border"
+                                        [src]="mgGetImage('flightLogo', row.rowId)"
+                                    />
+                                </div>
+                                <a
+                                    href="#"
+                                    magic="BEdit"
+                                    [rowId]="row.rowId"
+                                    [attr.disabled]="mgIsDisabled('BEdit', row.rowId)"
+                                    class="BEditProps"
+                                >
+                                    {{mgGetValue('BEdit', row.rowId)}}
+                                    </a>
+                                    <a
+                                        href="#"
+                                        magic="BDelete"
+                                        [rowId]="row.rowId"
+                                        class="BDeleteProps"
+                                    >
+                                        {{mgGetValue('BDelete', row.rowId)}}
+                                        </a>
+                                        </div>
+                                        </form>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div
+                                            magic="Group1048586"
+                                            class="Group1048586Props"
+                                        >
+                                            </div>
+                                            <ndc-dynamic
+                                                magic="SubformDetails"
+                                                class="SubformDetailsProps"
+                                                [ndcDynamicComponent]="mgGetComp('SubformDetails')"
+                                                [ndcDynamicInputs]="mgGetParameters('SubformDetails')"
+                                            >
+                                                </ndc-dynamic>
+                                                </div>
+                                                </div>
+                                                </form>

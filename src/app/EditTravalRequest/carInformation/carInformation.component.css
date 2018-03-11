@@ -1,0 +1,55 @@
+/*this is a component css*/
+
+.carInformationProps {}
+
+.AddFlightImgProps {}
+
+.SelectFlightLProps {}
+
+.serviceAddressProps {}
+
+.ToProps {}
+
+.FromProps {}
+
+.carFromplaceProps {}
+
+.carToplaceProps {}
+
+.carServiceTypeProps {}
+
+.fromairportProps {}
+
+.Grp1Props {
+    border: lightskyblue solid 1px;
+}
+
+.PickupLProps {}
+
+.fromdateEditProps {}
+
+.fromdateTimeEditProps {}
+
+.Grp2Props {
+    border: lightskyblue solid 1px;
+}
+
+.ReturnLProps {}
+
+.todateEditProps {}
+
+.todateTimeToProps {}
+
+.Grp3Props {
+    border: lightskyblue solid 1px;
+}
+
+.imgPicture6Props {}
+
+.Grp4Props {
+    border: lightskyblue solid 1px;
+}
+
+.imgPicture7Props {}
+
+.BSaveProps {}

@@ -1,0 +1,63 @@
+/*this is a component css*/
+
+.EditTravelRequestEntriesProps {}
+
+.BckPckImgProps {}
+
+.DescriptionScreenProps {}
+
+.DepartureDateScreenProps {}
+
+.ArrivalDateScreenProps {}
+
+.AddFlightImgProps {}
+
+.AddHotelImgProps {}
+
+.AddCarImgProps {}
+
+.AddRestoImgProps {}
+
+.Group1048585Props {
+    border: lightskyblue solid 1px;
+}
+
+.TableEditRequestEntriesProps {
+    height: 800px;
+    overflow-y: scroll;
+    border: lightskyblue solid 1px;
+}
+
+.TableEditRequestEntries_table_rowProps {}
+
+.TableEditRequestEntries_table_rowProps:hover {
+    background-color: #EEEEEE;
+}
+
+.selected {
+    background: #F5F5F5;
+}
+
+.Column1048588Props {}
+
+.flightProps {}
+
+.RDescriptionProps {}
+
+.bottomlabelProps {}
+
+.Column1048589Props {}
+
+.flightLogoProps {}
+
+.BEditProps {}
+
+.BDeleteProps {}
+
+.Group1048586Props {
+    border: lightskyblue solid 1px;
+}
+
+.SubformDetailsProps {
+    border: lightskyblue solid 1px;
+}

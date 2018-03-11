@@ -1,0 +1,29 @@
+/*this is a component css*/
+
+.HotelInformationProps {}
+
+.AddHotelImgProps {}
+
+.SelectFlightLProps {}
+
+.serviceAddressProps {}
+
+.CheckInLProps {}
+
+.fromdateEditProps {}
+
+.fromtimeEditProps {}
+
+.CheckOutLProps {}
+
+.todateEditProps {}
+
+.totimeEditProps {}
+
+.HotelIDProps {}
+
+.imgSubformProps {
+    border: lightskyblue solid 1px;
+}
+
+.BSaveProps {}
