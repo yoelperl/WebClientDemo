@@ -3,7 +3,6 @@
   [formGroup]="screenFormGroup"
 >
   <div
-    class="magic-container"
     magic="YourTravel"
     class="YourTravel"
     [ngStyle]="{'background-image': 'url(' + mgGetStyle('YourTravel', 'background') + ')'}"
@@ -12,47 +11,47 @@
     <div class="main-menu">
       <div
         magic="menugroup"
-        class="menugroup mgColor46"
+        class="menugroup"
       >
         <div *ngIf="mgIsImageExists('MainHome')">
           <img
             magic="MainHome"
-            class="MainHome mgColor14"
+            class="MainHome"
             [src]="mgGetImage('MainHome')"
           />
         </div>
         <a
           href="#"
           magic="BPackages"
-          class="BPackages mgFont19 mgColor30"
+          class="BPackages"
         >
           {{mgGetValue('BPackages')}}
         </a>
         <a
           href="#"
           magic="BAirports"
-          class="BAirports mgFont19 mgColor30"
+          class="BAirports"
         >
           {{mgGetValue('BAirports')}}
         </a>
         <a
           href="#"
           magic="BHotels"
-          class="BHotels mgFont19 mgColor30"
+          class="BHotels"
         >
           {{mgGetValue('BHotels')}}
         </a>
         <a
           href="#"
           magic="BCarRentals"
-          class="BCarRentals mgFont19 mgColor30"
+          class="BCarRentals"
         >
           {{mgGetValue('BCarRentals')}}
         </a>
         <a
           href="#"
           magic="BRestaurants"
-          class="BRestaurants mgFont19 mgColor30"
+          class="BRestaurants"
         >
           {{mgGetValue('BRestaurants')}}
         </a>
@@ -61,23 +60,25 @@
     </div>
 
     <div class="main-content">
-      <div class="main-label">
-        <label
-          magic="TravelForLabel"
-          class="TravelForLabel"
+      <div>
+        <div class="main-label">
+          <label
+            magic="TravelForLabel"
+            class="TravelForLabel"
+          >
+            {{mgGetText('TravelForLabel')}}
+          </label>
+        </div>
+
+
+        <ndc-dynamic
+          magic="MainCanvas"
+          class="MainCanvas"
+          [ndcDynamicComponent]="mgGetComp('MainCanvas')"
+          [ndcDynamicInputs]="mgGetParameters('MainCanvas')"
         >
-          {{mgGetText('TravelForLabel')}}
-        </label>
+        </ndc-dynamic>
       </div>
-
-
-      <ndc-dynamic
-        magic="MainCanvas"
-        class="MainCanvas"
-        [ndcDynamicComponent]="mgGetComp('MainCanvas')"
-        [ndcDynamicInputs]="mgGetParameters('MainCanvas')"
-      >
-      </ndc-dynamic>
     </div>
   </div>
 </form>

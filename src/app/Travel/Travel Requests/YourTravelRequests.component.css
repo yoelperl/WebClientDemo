@@ -3,8 +3,7 @@
 .YourTravelRequestsProps {}
 
 .mytableProps {
-    height: 800px;
-    overflow-y: scroll;
+    height: 330px;
     border: lightskyblue solid 1px;
 }
 

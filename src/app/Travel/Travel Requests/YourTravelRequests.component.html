@@ -1,151 +1,192 @@
 <form
-    novalidate
-    [formGroup]="screenFormGroup"
+  novalidate
+  [formGroup]="screenFormGroup"
 >
-    <div
-        magic="YourTravelRequests"
-        class="YourTravelRequestsProps mgFont2 mgColor14"
-    >
-        <div
-            class="mytable"
-            magic="mytable"
-            class="mytableProps"
-            infinite-scroll
-            [infiniteScrollDistance]="2"
-            [infiniteScrollThrottle]="500"
-            (scrolled)="onScrollDown()"
-            [scrollWindow]="false"
-        >
-            <div *ngFor="let row of task.Records.list">
+  <div
+    magic="YourTravelRequests"
+    class="YourTravelRequests "
+  >
+    <div class="cards-wrapper">
+
+      <div *ngIf="mgIsImageExists('AddPlusImg')">
+        <mat-card class="add-card">
+          <button
+            magic="AddPlusImg"
+            class="BAdd"
+            mat-fab>
+            <mat-icon
+              class="md-24"
+              aria-label="Example icon-button with a heart icon">
+              add
+            </mat-icon>
+          </button>
+          <span>Add new package</span>
+        </mat-card>
+      </div>
+      <div
+        class="mytable"
+        magic="mytable"
+        class="mytableProps"
+      >
+        <div *ngFor="let row of task.Records.list">
+          <div
+            *ngIf="mgIfRowCreated(row.rowId)"
+            id="row"
+          >
+            <form
+              [formGroup]="mgGetFormGroupByRow(row.rowId)"
+              class="mytable_table_rowProps"
+              [ngClass]="{ 'selected': isRowSelected('mytable', row.rowId)}"
+            >
+              <mat-card>
                 <div
-                    *ngIf="mgIfRowCreated(row.rowId)"
-                    id="row"
+                  magic="Column1048579"
+                  class="Column1048579Props"
                 >
-                    <form
-                        [formGroup]="mgGetFormGroupByRow(row.rowId)"
-                        class="mytable_table_rowProps"
-                        [ngClass]="{ 'selected': isRowSelected('mytable', row.rowId)}"
-                    >
-                        <div
-                            magic="Column1048579"
-                            class="Column1048579Props mgColor15"
+
+                  <label
+                    magic="DescriptionText"
+                    [rowId]="row.rowId"
+                    class="DescriptionText "
+                  >
+                    {{mgGetText('DescriptionText')}}
+                  </label>
+                  <div class="menu-wrapper">
+                    <button mat-icon-button [matMenuTriggerFor]="menu">
+                      <mat-icon>more_vert</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+
+                      <span>
+                        <a
+                          href="#"
+                          magic="BEdit"
+                          [rowId]="row.rowId"
+                          class="BEdit"
+                          mat-menu-item
                         >
-                            <div *ngIf="mgIsImageExists('backgroundImage')">
-                                <img
-                                    magic="backgroundImage"
-                                    [rowId]="row.rowId"
-                                    class="backgroundImageProps hidden_border"
-                                    [src]="mgGetImage('backgroundImage', row.rowId)"
-                                />
-                            </div>
-                            <label
-                                magic="DescriptionText"
-                                [rowId]="row.rowId"
-                                class="DescriptionTextProps mgFont19 mgColor15"
-                            >
-                                Text
-                                </label>
-                                <label
-                                    magic="DepartureDate"
-                                    [rowId]="row.rowId"
-                                    class="DepartureDateProps mgFont21 mgColor41"
-                                >
-                                    {{mgGetValue('DepartureDate', row.rowId)}}
-                                    </label>
-                                    <label
-                                        magic="ArrivalDate"
-                                        [rowId]="row.rowId"
-                                        class="ArrivalDateProps mgFont21 mgColor41"
-                                    >
-                                        {{mgGetValue('ArrivalDate', row.rowId)}}
-                                        </label>
-                                        <div *ngIf="mgIsImageExists('takeoff')">
-                                            <img
-                                                magic="takeoff"
-                                                [rowId]="row.rowId"
-                                                class="takeoffProps hidden_border"
-                                                [src]="mgGetImage('takeoff', row.rowId)"
-                                            />
-                                        </div>
-                                        <div *ngIf="mgIsImageExists('land')">
-                                            <img
-                                                magic="land"
-                                                [rowId]="row.rowId"
-                                                class="landProps hidden_border"
-                                                [src]="mgGetImage('land', row.rowId)"
-                                            />
-                                        </div>
-                                        <div *ngIf="mgIsImageExists('Ellipse')">
-                                            <img
-                                                magic="Ellipse"
-                                                [rowId]="row.rowId"
-                                                class="EllipseProps hidden_border"
-                                                [src]="mgGetImage('Ellipse', row.rowId)"
-                                            />
-                                        </div>
-                                        <div *ngIf="mgIsImageExists('FlightImg')">
-                                            <img
-                                                magic="FlightImg"
-                                                [rowId]="row.rowId"
-                                                [style.visibility]="mgGetVisible('FlightImg', row.rowId)"
-                                                class="FlightImgProps hidden_border"
-                                                [src]="mgGetImage('FlightImg', row.rowId)"
-                                            />
-                                        </div>
-                                        <div *ngIf="mgIsImageExists('HotelImg')">
-                                            <img
-                                                magic="HotelImg"
-                                                [rowId]="row.rowId"
-                                                [style.visibility]="mgGetVisible('HotelImg', row.rowId)"
-                                                class="HotelImgProps hidden_border"
-                                                [src]="mgGetImage('HotelImg', row.rowId)"
-                                            />
-                                        </div>
-                                        <div *ngIf="mgIsImageExists('CarImg')">
-                                            <img
-                                                magic="CarImg"
-                                                [rowId]="row.rowId"
-                                                [style.visibility]="mgGetVisible('CarImg', row.rowId)"
-                                                class="CarImgProps hidden_border"
-                                                [src]="mgGetImage('CarImg', row.rowId)"
-                                            />
-                                        </div>
-                                        <div *ngIf="mgIsImageExists('RestoImg')">
-                                            <img
-                                                magic="RestoImg"
-                                                [rowId]="row.rowId"
-                                                [style.visibility]="mgGetVisible('RestoImg', row.rowId)"
-                                                class="RestoImgProps hidden_border"
-                                                [src]="mgGetImage('RestoImg', row.rowId)"
-                                            />
-                                        </div>
-                                        <a
-                                            href="#"
-                                            magic="BEdit"
-                                            [rowId]="row.rowId"
-                                            class="BEditProps"
-                                        >
-                                            {{mgGetValue('BEdit', row.rowId)}}
-                                            </a>
-                                            <a
-                                                href="#"
-                                                magic="BDelete"
-                                                [rowId]="row.rowId"
-                                                class="BDeleteProps"
-                                            >
-                                                {{mgGetValue('BDelete', row.rowId)}}
-                                                </a>
-            </div>
+                          {{mgGetValue('BEdit', row.rowId)}}
+                        </a>
+                      </span>
+
+                      <span>
+                        <a
+                          href="#"
+                          magic="BDelete"
+                          [rowId]="row.rowId"
+                          class="BDelete"
+                          mat-menu-item
+                        >
+                          {{mgGetValue('BDelete', row.rowId)}}
+                        </a>
+                      </span>
+
+                    </mat-menu>
+                  </div>
+                  <div *ngIf="mgIsImageExists('backgroundImage')"
+                       [ngStyle]="{'background-image':'url('+ mgGetImage('backgroundImage', row.rowId) + ')'}"
+                  >
+                    <img
+                      magic="backgroundImage"
+                      [rowId]="row.rowId"
+                      class="backgroundImage hidden_border  md-card-image"
+                      [src]="mgGetImage('backgroundImage', row.rowId)"
+                    />
+                  </div>
+
+                  <div class="details-wrapper">
+                    <div class="flight-details">
+                      <div *ngIf="mgIsImageExists('takeoff')">
+                        <img
+                          magic="takeoff"
+                          [rowId]="row.rowId"
+                          class="takeoff hidden_border"
+                          [src]="mgGetImage('takeoff', row.rowId)"
+                        />
+                      </div>
+
+
+                      <label
+                        magic="DepartureDate"
+                        [rowId]="row.rowId"
+                        class="DepartureDate"
+                      >
+                        {{mgGetValue('DepartureDate', row.rowId)}}
+                      </label>
+
+                      <div *ngIf="mgIsImageExists('Ellipse')">
+                        <img
+                          magic="Ellipse"
+                          [rowId]="row.rowId"
+                          class="Ellipse hidden_border"
+                          [src]="mgGetImage('Ellipse', row.rowId)"
+                        />
+
+                        <div *ngIf="mgIsImageExists('land')">
+                          <img
+                            magic="land"
+                            [rowId]="row.rowId"
+                            class="land hidden_border"
+                            [src]="mgGetImage('land', row.rowId)"
+                          />
+
+                          <label
+                            magic="ArrivalDate"
+                            [rowId]="row.rowId"
+                            class="ArrivalDate"
+                          >
+                            {{mgGetValue('ArrivalDate', row.rowId)}}
+                          </label>
+
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="icons-area">
+                      <div *ngIf="mgIsImageExists('FlightImg')">
+                        <img
+                          magic="FlightImg"
+                          [rowId]="row.rowId"
+                          [style.visibility]="mgGetVisible('FlightImg', row.rowId)"
+                          class="FlightImg hidden_border"
+                          [src]="mgGetImage('FlightImg', row.rowId)"
+                        />
+                      </div>
+                      <div *ngIf="mgIsImageExists('HotelImg')">
+                        <img
+                          magic="HotelImg"
+                          [rowId]="row.rowId"
+                          [style.visibility]="mgGetVisible('HotelImg', row.rowId)"
+                          class="HotelImg hidden_border"
+                          [src]="mgGetImage('HotelImg', row.rowId)"
+                        />
+                      </div>
+                      <div *ngIf="mgIsImageExists('CarImg')">
+                        <img
+                          magic="CarImg"
+                          [rowId]="row.rowId"
+                          [style.visibility]="mgGetVisible('CarImg', row.rowId)"
+                          class="CarImg hidden_border"
+                          [src]="mgGetImage('CarImg', row.rowId)"
+                        />
+                      </div>
+                      <div *ngIf="mgIsImageExists('RestoImg')">
+                        <img
+                          magic="RestoImg"
+                          [rowId]="row.rowId"
+                          [style.visibility]="mgGetVisible('RestoImg', row.rowId)"
+                          class="RestoImg hidden_border"
+                          [src]="mgGetImage('RestoImg', row.rowId)"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </mat-card>
             </form>
-            </div>
-            </div>
-            </div>
-            <div *ngIf="mgIsImageExists('AddPlusImg')">
-                <img
-                    magic="AddPlusImg"
-                    class="AddPlusImgProps mgColor15 hidden_border"
-                    [src]="mgGetImage('AddPlusImg')"
-                />
-            </div>
-            </div>
-            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
