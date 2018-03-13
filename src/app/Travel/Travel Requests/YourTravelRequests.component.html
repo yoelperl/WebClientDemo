@@ -23,11 +23,12 @@
           <span>Add new package</span>
         </mat-card>
       </div>
-      <div
-        class="mytable"
-        magic="mytable"
-        class="mytableProps"
-      >
+      <!--//start table-->
+      <!--<div-->
+        <!--class="mytable"-->
+        <!--magic="mytable"-->
+        <!--class="mytableProps"-->
+      <!--&gt;-->
         <div *ngFor="let row of task.Records.list">
           <div
             *ngIf="mgIfRowCreated(row.rowId)"
@@ -186,7 +187,8 @@
             </form>
           </div>
         </div>
-      </div>
+      <!--</div>-->
+      <!--// end table-->
     </div>
   </div>
 </form>
