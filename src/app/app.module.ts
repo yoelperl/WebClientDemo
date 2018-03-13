@@ -23,16 +23,16 @@ import {ThemeModule} from "./magic/src/ui/theme/theme.module";
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 import {CalendarModule} from 'primeng/components/calendar/calendar';
 import {MatMomentDateModule} from "@angular/material-moment-adapter";
-// import {WMatTimePickerComponent} from "./components/TimePicker/time-control/w-mat-timepicker.component";
-// import {WClockComponent, WTimeDialogComponent} from "./components/TimePicker";
+import {WMatTimePickerComponent} from "./components/TimePicker/time-control/w-mat-timepicker.component";
+import {WClockComponent, WTimeDialogComponent} from "./components/TimePicker";
 
 const comps = ComponentsList.getAllComponents();
 
 @NgModule({
    declarations: [AppComponent, ...comps,   // timepicker
-    // WMatTimePickerComponent,
-    // WTimeDialogComponent,
-    // WClockComponent,
+    WMatTimePickerComponent,
+    WTimeDialogComponent,
+    WClockComponent,
      ],
    imports     : [
       BrowserModule,
@@ -66,7 +66,7 @@ const comps = ComponentsList.getAllComponents();
    providers   : [],
 
    bootstrap: [AppComponent],
-   // entryComponents:[WTimeDialogComponent]
+   entryComponents:[WTimeDialogComponent]
 })
 export class AppModule
 {
