@@ -28,7 +28,10 @@
     border: lightskyblue solid 1px;
 }
 
-.TableEditRequestEntries_table_rowProps {}
+.TableEditRequestEntries_table_rowProps {
+  display: flex;
+  align-items: center;
+}
 
 .TableEditRequestEntries_table_rowProps:hover {
     background-color: #EEEEEE;

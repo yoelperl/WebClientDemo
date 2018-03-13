@@ -46,3 +46,9 @@
 .BDeleteProps {}
 
 .AddPlusImgProps {}
+
+.flight-detailsLand{
+  display: flex;
+  align-items: center;
+
+}
