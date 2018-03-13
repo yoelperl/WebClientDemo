@@ -1,94 +1,170 @@
 <form
-    novalidate
-    [formGroup]="screenFormGroup"
+  novalidate
+  [formGroup]="screenFormGroup"
+  class="Hotel magic-container"
+  magic="Hotel"
 >
-    <div
-        magic="HotelInformation"
-        class="HotelInformationProps mgColor14"
+
+  <div class="top-details-title">
+
+    <div class="hotel-title">
+      <img
+        *ngIf="mgIsImageExists('AddHotelImg')"
+        magic="AddHotelImg"
+        class="AddHotelImg"
+      [src]="mgGetImage('AddHotelImg')"
+      />
+      <!--[src]="mgGetFileImage('AddHotelImg')"-->
+      <!--[src]="'assets//images/Travel/rest.jpg'"-->
+
+      <label
+        magic="SelectFlightL"
+        class="SelectFlightL"
+      >
+        Hotel Details
+      </label>
+    </div>
+
+
+    <!--(change)="onselectionchanged($event,'HotelID')"-->
+    <!--[(value)]="getSelectedValue('HotelID')"-->
+    <!--class="HotelID-wrapper"-->
+    <!--magic="HotelID"-->
+
+
+    <mat-form-field
     >
-        <div *ngIf="mgIsImageExists('AddHotelImg')">
-            <img
-                magic="AddHotelImg"
-                class="AddHotelImgProps mgColor14 hidden_border"
-                [src]="mgGetImage('AddHotelImg')"
-            />
-        </div>
-        <label
-            magic="SelectFlightL"
-            class="SelectFlightLProps mgFont14 mgColor1"
+      <mat-select
+        class="HotelID"
+        placeholder="Select hotel"
+      >
+        <mat-option
+          *ngFor="let o of mgGetListboxValues('HotelID');"
+          [value]="o.index"
         >
-            Hotel Details
-            </label>
-            <label
-                magic="serviceAddress"
-                class="serviceAddressProps mgFont15 mgColor2 has_border"
+          {{o.realString}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+  </div>
+  <div class="middle-details-section">
+
+    <div
+      class="details-address-title">
+      <input
+        hidden
+        type="text"
+        formControlName="serviceAddress"
+        magic="serviceAddress"
+        class="serviceAddress"
+      />
+
+    </div>
+
+
+    <div class="checkin-row">
+      <div class="checkin-details">
+        <div class="data-with-label">
+          <label
+            magic="CheckInL"
+            class="CheckInL"
+          >
+            Check-in
+
+          </label>
+          <div class="date-time-row">
+
+            <mat-form-field>
+              <input
+                matInput
+
+                [matDatepicker]="fromdateEdit"
+                placeholder="Check-in Date"
+                formControlName="fromdateEdit"
+                magic="fromdateEdit"
+                class="fromdateEdit"
+              >
+              <mat-datepicker-toggle matSuffix [for]="fromdateEdit"></mat-datepicker-toggle>
+              <mat-datepicker disabled="false" #fromdateEdit></mat-datepicker>
+            </mat-form-field>
+
+
+            <w-mat-timepicker
+              formControlName="fromtimeEdit"
+              magic="fromtimeEdit"
             >
-                {{mgGetValue('serviceAddress')}}
-                </label>
-                <label
-                    magic="CheckInL"
-                    class="CheckInLProps mgFont14 mgColor16"
-                >
-                    Check-In:
-                    </label>
-                    <p-calendar
-                        formControlName="fromdateEdit"
-                        magic="fromdateEdit"
-                        class="fromdateEditProps mgFont15 mgColor1"
-                    ></p-calendar>
-                        <p-calendar
-                            formControlName="fromtimeEdit"
-                            magic="fromtimeEdit"
-                            class="fromtimeEditProps mgFont15 mgColor1"
-                            [showSeconds]="true"
-                            [timeOnly]="true"
-                        ></p-calendar>
-                            <label
-                                magic="CheckOutL"
-                                class="CheckOutLProps mgFont14 mgColor16"
-                            >
-                                Check-Out:
-                                </label>
-                                <p-calendar
-                                    formControlName="todateEdit"
-                                    magic="todateEdit"
-                                    class="todateEditProps mgFont15 mgColor1"
-                                ></p-calendar>
-                                    <p-calendar
-                                        formControlName="totimeEdit"
-                                        magic="totimeEdit"
-                                        class="totimeEditProps mgFont15 mgColor1"
-                                        [showSeconds]="true"
-                                        [timeOnly]="true"
-                                    ></p-calendar>
-                                        <select
-                                            (change)="mgOnSelectionChanged($event,'HotelID')"
-                                            value="mgGetSelectedValue('HotelID')"
-                                            magic="HotelID"
-                                            class="HotelIDProps"
-                                            formControlName="HotelID"
-                                        >
-                                            <option
-                                                *ngFor="let o of mgGetListboxValues('HotelID');"
-                                                [selected]="o.index == mgGetSelectedValue('HotelID')"
-                                                [value]="o.index"
-                                            >
-                                                {{o.realString}}
-                                                </option>
-                                                </select>
-                                                <ndc-dynamic
-                                                    magic="imgSubform"
-                                                    class="imgSubformProps"
-                                                    [ndcDynamicComponent]="mgGetComp('imgSubform')"
-                                                    [ndcDynamicInputs]="mgGetParameters('imgSubform')"
-                                                >
-                                                    </ndc-dynamic>
-                                                    <input
-                                                        type="button"
-                                                        magic="BSave"
-                                                        [attr.disabled]="mgIsDisabled('BSave')"
-                                                        class="BSaveProps"
-                                                        value=Ok
-                                                    />
-                                                    </div>
-                                                    </form>
+            </w-mat-timepicker>
+
+
+          </div>
+        </div>
+
+        <div class="data-with-label">
+
+          <label
+            magic="CheckOutL"
+            class="CheckOutL"
+          >
+            Check-out
+          </label>
+          <div class="date-time-row">
+
+
+            <mat-form-field>
+              <input
+                matInput
+
+                [matDatepicker]="todateEdit"
+                placeholder="Check-out Date"
+                formControlName="todateEdit"
+                magic="todateEdit"
+                class="todateEdit"
+              >
+              <mat-datepicker-toggle matSuffix [for]="todateEdit"></mat-datepicker-toggle>
+              <mat-datepicker disabled="false" #todateEdit></mat-datepicker>
+            </mat-form-field>
+
+
+            <w-mat-timepicker
+              formControlName="totimeEdit"
+              magic="totimeEdit"
+            >
+            </w-mat-timepicker>
+
+          </div>
+        </div>
+
+
+      </div>
+      <div class="hotel-map-wrapper">
+        <div class="map-image"></div>
+      </div>
+    </div>
+    <div class="imgSubForm-section">
+      <!--<mga-LargeImage></mga-LargeImage>-->
+      <ndc-dynamic
+        magic="imgSubform"
+        class="imgSubform"
+        [ndcDynamicComponent]="mgGetComp('imgSubform')"
+        [ndcDynamicInputs]="mgGetParameters('imgSubform')"
+      >
+      </ndc-dynamic>
+    </div>
+    <div class="details-button-section">
+      <button
+        magic="BSave"
+        class="BSave"
+        [attr.disabled]="mgIsDisabled('BSave')"
+        mat-button color="primary"
+      >
+        Save
+      </button>
+
+    </div>
+  </div>
+
+
+</form>
+
