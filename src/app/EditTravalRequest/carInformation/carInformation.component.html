@@ -1,151 +1,151 @@
 <form
-    novalidate
-    [formGroup]="screenFormGroup"
+  novalidate
+  [formGroup]="screenFormGroup"
 >
-    <div
-        magic="carInformation"
-        class="carInformationProps mgColor14"
+  <div
+    class="magic-container"
+    magic="Car"
+    class="Car"
+  >
+    <div *ngIf="mgIsImageExists('AddFlightImg')">
+      <img
+        magic="AddFlightImg"
+        class="AddFlightImg"
+        [src]="mgGetImage('AddFlightImg')"
+      />
+    </div>
+    <label
+      magic="SelectFlightL"
+      class="SelectFlightL"
     >
-        <div *ngIf="mgIsImageExists('AddFlightImg')">
-            <img
-                magic="AddFlightImg"
-                class="AddFlightImgProps mgColor14 hidden_border"
-                [src]="mgGetImage('AddFlightImg')"
-            />
-        </div>
-        <label
-            magic="SelectFlightL"
-            class="SelectFlightLProps mgFont14 mgColor1"
-        >
-            Car Details
-            </label>
-            <input
-                type="text"
-                formControlName="serviceAddress"
-                magic="serviceAddress"
-                class="serviceAddressProps mgFont15 mgColor2 has_border"
-            />
-            <label
-                magic="To"
-                class="ToProps mgFont14 mgColor16"
-            >
-                To:
-                </label>
-                <label
-                    magic="From"
-                    class="FromProps mgFont14 mgColor16"
-                >
-                    From:
-                    </label>
-                    <input
-                        type="text"
-                        formControlName="carFromplace"
-                        magic="carFromplace"
-                        class="carFromplaceProps mgFont15 mgColor2 has_border"
-                    />
-                    <input
-                        type="text"
-                        formControlName="carToplace"
-                        magic="carToplace"
-                        class="carToplaceProps mgFont15 mgColor2 has_border"
-                    />
-                    <input
-                        type="text"
-                        formControlName="carServiceType"
-                        magic="carServiceType"
-                        class="carServiceTypeProps mgFont15 mgColor2 has_border"
-                    />
-                    <select
-                        (change)="mgOnSelectionChanged($event,'fromairport')"
-                        value="mgGetSelectedValue('fromairport')"
-                        magic="fromairport"
-                        class="fromairportProps"
-                        formControlName="fromairport"
-                    >
-                        <option
-                            *ngFor="let o of mgGetListboxValues('fromairport');"
-                            [selected]="o.index == mgGetSelectedValue('fromairport')"
-                            [value]="o.index"
-                        >
-                            {{o.realString}}
-                            </option>
-                            </select>
-                            <div
-                                magic="Grp1"
-                                class="Grp1Props mgColor22"
-                            >
-                                <label
-                                    magic="PickupL"
-                                    class="PickupLProps mgFont14 mgColor16"
-                                >
-                                    Pickup:
-                                    </label>
-                                    <p-calendar
-                                        formControlName="fromdateEdit"
-                                        magic="fromdateEdit"
-                                        class="fromdateEditProps mgFont15 mgColor1"
-                                    ></p-calendar>
-                                        <p-calendar
-                                            formControlName="fromdateTimeEdit"
-                                            magic="fromdateTimeEdit"
-                                            class="fromdateTimeEditProps mgFont15 mgColor1"
-                                            [showSeconds]="true"
-                                            [timeOnly]="true"
-                                        ></p-calendar>
-                                            </div>
-                                            <div
-                                                magic="Grp2"
-                                                class="Grp2Props mgColor22"
-                                            >
-                                                <label
-                                                    magic="ReturnL"
-                                                    class="ReturnLProps mgFont14 mgColor16"
-                                                >
-                                                    Return:
-                                                    </label>
-                                                    <p-calendar
-                                                        formControlName="todateEdit"
-                                                        magic="todateEdit"
-                                                        class="todateEditProps mgFont15 mgColor1"
-                                                    ></p-calendar>
-                                                        <p-calendar
-                                                            formControlName="todateTimeTo"
-                                                            magic="todateTimeTo"
-                                                            class="todateTimeToProps mgFont15 mgColor1"
-                                                            [showSeconds]="true"
-                                                            [timeOnly]="true"
-                                                        ></p-calendar>
-                                                            </div>
-                                                            <div
-                                                                magic="Grp3"
-                                                                class="Grp3Props mgColor22"
-                                                            >
-                                                                <div *ngIf="mgIsImageExists('imgPicture6')">
-                                                                    <img
-                                                                        magic="imgPicture6"
-                                                                        class="imgPicture6Props"
-                                                                        [src]="mgGetImage('imgPicture6')"
-                                                                    />
-                                                                </div>
-                                                                </div>
-                                                                <div
-                                                                    magic="Grp4"
-                                                                    class="Grp4Props mgColor22"
-                                                                >
-                                                                    <div *ngIf="mgIsImageExists('imgPicture7')">
-                                                                        <img
-                                                                            magic="imgPicture7"
-                                                                            class="imgPicture7Props"
-                                                                            [src]="mgGetImage('imgPicture7')"
-                                                                        />
-                                                                    </div>
-                                                                    </div>
-                                                                    <input
-                                                                        type="button"
-                                                                        magic="BSave"
-                                                                        [attr.disabled]="mgIsDisabled('BSave')"
-                                                                        class="BSaveProps"
-                                                                        value=Ok
-                                                                    />
-                                                                    </div>
-                                                                    </form>
+      Car Details
+    </label>
+    <input
+      type="text"
+      formControlName="serviceAddress"
+      magic="serviceAddress"
+      class="serviceAddress"
+    />
+    <label
+      magic="To"
+      class="To"
+    >
+      To:
+    </label>
+    <label
+      magic="From"
+      class="From"
+    >
+      From:
+    </label>
+    <input
+      type="text"
+      formControlName="carFromplace"
+      magic="carFromplace"
+      class="carFromplace"
+    />
+    <input
+      type="text"
+      formControlName="carToplace"
+      magic="carToplace"
+      class="carToplace"
+    />
+    <input
+      type="text"
+      formControlName="carServiceType"
+      magic="carServiceType"
+      class="carServiceType"
+    />
+    <select
+      (change)="mgOnSelectionChanged($event,'fromairport')"
+      value="getSelectedValue('fromairport')"
+      magic="fromairport"
+      class="fromairport"
+    >
+      <option
+        *ngFor="let o of mgGetListboxValues('fromairport');"
+        [selected]="o.index == mgGetSelectedValue('fromairport')"
+        value="o.index"
+      >
+        {{o.realString}}
+      </option>
+    </select>
+    <div
+      magic="Grp1"
+      class="Grp1"
+    >
+      <label
+        magic="PickupL"
+        class="PickupL"
+      >
+        Pickup:
+      </label>
+      <input
+        type="text"
+        formControlName="fromdateEdit"
+        magic="fromdateEdit"
+        class="fromdateEdit"
+      />
+      <input
+        type="text"
+        formControlName="fromdateTimeEdit"
+        magic="fromdateTimeEdit"
+        class="fromdateTimeEdit"
+      />
+    </div>
+    <div
+      magic="Grp2"
+      class="Grp2"
+    >
+      <label
+        magic="ReturnL"
+        class="ReturnL"
+      >
+        Return:
+      </label>
+      <input
+        type="text"
+        formControlName="todateEdit"
+        magic="todateEdit"
+        class="todateEdit"
+      />
+      <input
+        type="text"
+        formControlName="todateTimeTo"
+        magic="todateTimeTo"
+        class="todateTimeTo"
+      />
+    </div>
+    <div
+      magic="Grp3"
+      class="Grp3"
+    >
+      <div *ngIf="mgIsImageExists('imgPicture6')">
+        <img
+          magic="imgPicture6"
+          class="imgPicture6"
+          [src]="mgGetImage('imgPicture6')"
+        />
+      </div>
+    </div>
+    <div
+      magic="Grp4"
+      class="Grp4"
+    >
+      <div *ngIf="mgIsImageExists('imgPicture7')">
+        <img
+          magic="imgPicture7"
+          class="imgPicture7"
+          [src]="mgGetImage('imgPicture7')"
+        />
+      </div>
+    </div>
+    <input
+      type="button"
+      magic="BSave"
+      class="BSave"
+      [attr.disabled]="mgIsDisabled('BSave')"
+      value=Ok
+    />
+  </div>
+</form>
