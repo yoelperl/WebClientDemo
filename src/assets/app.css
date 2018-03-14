@@ -12,34 +12,6 @@ body
 
 .backgroundImage {height: 184px;background-repeat: no-repeat;width: 316px;background-size: cover;/* border: 2px solid yellow; */}
 
-.cards-wrapper {
-    /* border: 7px solid yellowgreen; */
-
-    display: inline-flex;
-    width: 100%;
-    flex-wrap: wrap;
-    /*padding: 4% 10% 3% 10%;*/
-    justify-content: left;
-    height: 80%;
-}
-
-.cards-wrapper > div, .cards-wrapper > mat-card {
-    width: 310px;
-    /*!*!* border: 5px solid red; *!*!*/
-    height: 328px;
-    display: inline-flex;
-    margin: 1%;
-}
-
-mat-card.mat-card, mat-card.add-card {
-    padding: 0;
-    width: 310px;
-    height: 328px;
-    overflow: hidden;
-    /* margin-right: 50px; */
-    min-width: 310px;
-}
-
 .details-wrapper {
     /* border: 1px solid red; */
     height: 144px;
@@ -79,8 +51,6 @@ img.takeoff, img.land
   padding-left: 20px;
 }
 
-.cards-wrapper form {}
-
 .menu-wrapper {
      position: absolute;
      right: 6px;
@@ -95,12 +65,6 @@ img.takeoff, img.land
     top: 2px;
 }
 
-mat-card.add-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 button.BAdd {
     /* flex: 1; */
