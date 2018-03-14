@@ -79,63 +79,12 @@ border-bottom: 0.5px solid #e6e6e6;
 /* box-shadow: 0px 2px 5.22px 0.78px rgba(60, 60, 60, 0.2); */
 }
 
-.list-item:last-child {
-    border-bottom: 0.5px solid #e6e6e6;
-}
 
-.flight-icon {
-    flex: 1;
-    /* border: 1px solid red; */
-    position: relative;
-    top: 7px;
-}
+/*.tmpID33 {*/
+    /*flex-direction: column;*/
+/*}*/
 
-label.RDescription {
-    flex: 110;
-    /* border: 1px solid yellow; */
-    height: 100%;
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    color: black;
-}
-
-img.flightLogo {
-    max-height: 50px;
-    width: 110px;
-}
-
-.tmpID33 {
-    flex-direction: column;
-}
-
-.tmpID34 {}
-
-
-.list-item > div {
-    width: 100%;
-}
-
-.list-labels-wrapper {
-    flex: 10;
-    /* border: 1px solid greenyellow; */
-    height: 100%;
-    flex-direction: column;
-    padding: 0px 10px 0px 20px;
-    color: #777777;
-    display: flex;
-}
-
-.airline-list-logo {
-    /* border: 3px solid red; */
-    height: 100%;
-    align-items: center;
-    flex: 4;
-}
-
-.list-menu .mat-menu-content.ng-trigger.ng-trigger-fadeInItems {}
-
-.list-item:last-child {}
+/*.tmpID34 {}*/
 
 .top-details-title {
     /* border: 3px solid red; */
@@ -218,18 +167,6 @@ mga-edittravelrequestentries .checkin-details {
 .data-with-label > label {
     margin-bottom: 10px;
     font-size: 13px;
-}
-
-.list-item {
-    display: flex;
-}
-
-.list-item > div > form:hover, .list-item-form-selected {
-    box-shadow: 0 0 5px #3e3e3e;
-}
-
-.list-item * {
-    cursor: pointer;
 }
 
 .date-time-row {

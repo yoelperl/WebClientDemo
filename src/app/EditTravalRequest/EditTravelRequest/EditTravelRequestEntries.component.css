@@ -179,3 +179,70 @@ label.main-card-label {
   display: flex;
   padding: 10px 30px 30px 40px;
 }
+
+
+
+.list-item:last-child {
+  border-bottom: 0.5px solid #e6e6e6;
+}
+.list-item > div {
+  width: 100%;
+}
+.list-item:last-child {}
+
+.list-item {
+  display: flex;
+}
+.list-item > div > form:hover, .list-item-form-selected {
+  box-shadow: 0 0 5px #3e3e3e;
+}
+
+.list-item * {
+  cursor: pointer;
+}
+
+
+.flight-icon {
+  flex: 1;
+  /* border: 1px solid red; */
+  position: relative;
+  top: 7px;
+}
+
+
+label.RDescription {
+  flex: 110;
+  /* border: 1px solid yellow; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: black;
+}
+
+
+img.flightLogo {
+  max-height: 50px;
+  width: 110px;
+}
+
+
+.list-labels-wrapper {
+  flex: 10;
+  /* border: 1px solid greenyellow; */
+  height: 100%;
+  flex-direction: column;
+  padding: 0px 10px 0px 20px;
+  color: #777777;
+  display: flex;
+}
+
+
+.airline-list-logo {
+  /* border: 3px solid red; */
+  height: 100%;
+  align-items: center;
+  flex: 4;
+}
+
+.list-menu .mat-menu-content.ng-trigger.ng-trigger-fadeInItems {}
