@@ -18,6 +18,33 @@
 
 .AddRestoImgProps {}
 
+img.AddFlightImg {
+  position: relative;
+  top: 3px;
+  margin-right: 14px;
+}
+
+
+img.AddHotelImg {
+  position: relative;
+  top: 3px;
+  margin-right: 14px;
+}
+
+
+img.AddCarImg {
+  position: relative;
+  top: 3px;
+  margin-right: 14px;
+}
+
+
+img.AddRestoImg {
+  position: relative;
+  top: 3px;
+  margin-right: 14px;
+}
+
 .Group1048585Props {
     border: lightskyblue solid 1px;
 }
