@@ -21,7 +21,16 @@
 
 .backgroundImageProps {}
 
-.DescriptionTextProps {}
+
+label.DescriptionTextProps {
+  color: white;
+  position: absolute;
+  /* border: 1px solid greenyellow; */
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
 
 .DepartureDateProps {}
 

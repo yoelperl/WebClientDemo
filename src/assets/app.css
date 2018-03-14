@@ -40,16 +40,6 @@ mat-card.mat-card, mat-card.add-card {
     min-width: 310px;
 }
 
-label.DescriptionText {
-    color: white;
-    position: absolute;
-    /* border: 1px solid greenyellow; */
-    padding: 10px;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-
 .details-wrapper {
     /* border: 1px solid red; */
     height: 144px;
