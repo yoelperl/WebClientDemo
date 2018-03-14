@@ -631,6 +631,19 @@ w-mat-timepicker {
     margin: 0;
 }
 
+img.AddFlightImg {
+  position: relative;
+  top: 3px;
+  margin-right: 14px;
+}
+
+
+img.AddHotelImg {
+  position: relative;
+  top: 3px;
+  margin-right: 14px;
+}
+
 .map-image.airport-image {
     background-image: url('images/airport2.jpg');
     background-size: contain;

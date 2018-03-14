@@ -14,32 +14,14 @@
 
 .AddHotelImgProps {}
 
-.AddCarImgProps {}
-
-.AddRestoImgProps {}
-
-img.AddFlightImg {
+img.AddCarImgProps {
   position: relative;
   top: 3px;
   margin-right: 14px;
 }
 
 
-img.AddHotelImg {
-  position: relative;
-  top: 3px;
-  margin-right: 14px;
-}
-
-
-img.AddCarImg {
-  position: relative;
-  top: 3px;
-  margin-right: 14px;
-}
-
-
-img.AddRestoImg {
+img.AddRestoImgProps {
   position: relative;
   top: 3px;
   margin-right: 14px;
