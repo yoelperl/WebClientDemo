@@ -8,15 +8,12 @@ body
   color: #070808;
 }
 
-
-
 .backgroundImage {height: 184px;background-repeat: no-repeat;width: 316px;background-size: cover;/* border: 2px solid yellow; */}
 
 * {
     box-sizing: border-box;
 }
 
-/*Start - all the following are use more then one screen and need to start on app*/
 label.DepartureDate, label.ArrivalDate {
   color: #8d8d8d;
   padding-right: 20px;
@@ -41,10 +38,6 @@ html {
 
 .YourTravel {}
 
-/*End - all the following are use more then one screen and need to start on app*/
-
-
-/*???*/
 .list-item-form {
     height: 70px;
     /* border: 4px solid #3abdf9; */
@@ -57,8 +50,6 @@ html {
 }
 
 .list-item-form-selected {
-
-  /*???*/
 
 height: 70px;
 
@@ -277,7 +268,6 @@ img.AddFlightImg {
   margin-right: 14px;
 }
 
-
 img.AddHotelImg {
   position: relative;
   top: 3px;
@@ -331,5 +321,3 @@ mga-flight1 {
   height: 80px;
 
 }
-
-
