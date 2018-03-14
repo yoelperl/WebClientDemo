@@ -12,70 +12,15 @@ body
 
 .backgroundImage {height: 184px;background-repeat: no-repeat;width: 316px;background-size: cover;/* border: 2px solid yellow; */}
 
-.details-wrapper {
-    /* border: 1px solid red; */
-    height: 144px;
-    display: flex;
-    flex-direction: column;
-}
-
 * {
     box-sizing: border-box;
 }
 
-.flight-details {
-    /* border: 2px solid yellowgreen; */
-    flex: 2;
-    display: flex;
-    align-items: center;
-    /*justify-content: space-evenly;*/
-}
-
-.icons-area {
-    flex: 3;
-    /* border: 1px solid blue; */
-    display: flex;
-    align-items: center;
-    /* justify-content: space-evenly; */
-    padding-left: 20px;
-}
-
+/*Start - all the following are use more then one screen and need to start on app*/
 label.DepartureDate, label.ArrivalDate {
   color: #8d8d8d;
   padding-right: 20px;
   padding-left: 20px;
-}
-
-img.takeoff, img.land
-{
-  padding-left: 20px;
-}
-
-.menu-wrapper {
-     position: absolute;
-     right: 6px;
-     top: 3px;
-    color: white;
-}
-
-.mat-menu-item a {
-    text-decoration: none;
-    color: gray;
-    position: relative;
-    top: 2px;
-}
-
-
-button.BAdd {
-    /* flex: 1; */
-    background-color: #037ab2 !important;
-}
-
-.add-card > span {
-    display: block !important;
-    color: #a3a3a6;
-    margin-top: 20px;
-    font-size: 22px;
 }
 
 .YourTravel {
@@ -89,24 +34,17 @@ button.BAdd {
     min-width: 900px;
 }
 
-label.TravelForLabel {
-    color: white;
-    height: 80px;
-    display: flex;
-    align-items: flex-end;
-}
-
 html {
-    height: 100%;
-    /* border: 4px solid yellow; */
-}
-
-mga-yourtravel > form {
-    height: 100%;
+  height: 100%;
+  /* border: 4px solid yellow; */
 }
 
 .YourTravel {}
 
+/*End - all the following are use more then one screen and need to start on app*/
+
+
+/*???*/
 .menugroup {
     /* border: 4px solid white; */
     width: 100%;
@@ -121,48 +59,7 @@ mga-yourtravel > form {
     padding-left: 50px;
     MIN-WIDTH: 1020px;
 }
-
-.main-content {
-    /* border: 4px solid fuchsia; */
-    flex: 1;
-    width: 95%;
-    display: flex;
-    padding: 1%;
-    /* MARGIN-TOP: 70px; */
-    display: flex;
-    flex-direction: column;
-}
-
-.main-menu {
-    width: 100%;
-    background-color: transparent;
-}
-
-.main-menu > .menugroup > a {
-    font-family: Roboto;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 20px;/* Approximation due to font substitution */
-    font-weight: 400;
-    line-height: 75.368px;/* Approximation due to font substitution */
-    text-align: center;
-    text-decoration: none;
-}
-
-.main-menu .menugroup > * {
-    margin-right: 80px;
-}
-
-.main-label {
-    font-family: Roboto;
-    color:  rgba(255, 255, 255, 0.85);
-    font-size: 20px;/* Approximation due to font substitution */
-    font-weight: 500;
-    line-height: 75.368px;/* Approximation due to font substitution */
-    text-align: center;
-    /* flex-direction: column; */
-    display: flex;
-
-}
+/*???*/
 
 .main-card {
     background-color: white;
@@ -349,10 +246,6 @@ img.flightLogo {
     height: 100%;
     align-items: center;
     flex: 4;
-}
-
-.menu-wrapper.list-menu {
-    color: darkgray;
 }
 
 .list-menu .mat-menu-content.ng-trigger.ng-trigger-fadeInItems {}

@@ -99,3 +99,68 @@ mat-card.add-card {
   align-items: center;
   flex-direction: column;
 }
+
+.details-wrapper {
+  /* border: 1px solid red; */
+  height: 144px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.flight-details {
+  /* border: 2px solid yellowgreen; */
+  flex: 2;
+  display: flex;
+  align-items: center;
+  /*justify-content: space-evenly;*/
+}
+
+.icons-area {
+  flex: 3;
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  padding-left: 20px;
+}
+
+
+img.takeoff, img.land
+{
+  padding-left: 20px;
+}
+
+.menu-wrapper {
+  position: absolute;
+  right: 6px;
+  top: 3px;
+  color: white;
+}
+
+.menu-wrapper.list-menu {
+  color: darkgray;
+}
+
+
+.mat-menu-item a {
+  text-decoration: none;
+  color: gray;
+  position: relative;
+  top: 2px;
+}
+
+
+button.BAdd {
+  /* flex: 1; */
+  background-color: #037ab2 !important;
+}
+
+
+.add-card > span {
+  display: block !important;
+  color: #a3a3a6;
+  margin-top: 20px;
+  font-size: 22px;
+}
