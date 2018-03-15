@@ -31,7 +31,7 @@ export class WMatTimePickerComponent implements ControlValueAccessor {
     if (!date) return;
     this.hour = date.getHours();
     this.minute = date.getMinutes();
-    this.meridien = 'AM';//~date.gettoLowerCase().indexOf('am') ? 'AM' : 'PM'
+    this.meridien = this.hour > 12 ? 'PM' : 'AM';
   }
 
   registerOnChange(fn) {
